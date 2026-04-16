@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
-    padding: 4rem 10rem;
+    padding: 4rem var(--page-gutter);
     background:
         radial-gradient(circle at 80% 20%, rgba(107, 33, 168, 0.16), transparent 35%),
         linear-gradient(180deg, rgba(8, 10, 15, 0.93), rgba(12, 14, 20, 0.98));
@@ -83,7 +83,7 @@
 
 @media (max-width: 768px) {
     .features {
-        padding: 3rem 5%;
+        padding: 3rem var(--page-gutter);
 
         &__list {
             grid-template-columns: 1fr;

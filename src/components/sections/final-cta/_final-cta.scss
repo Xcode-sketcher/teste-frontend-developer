@@ -3,7 +3,7 @@
     grid-template-columns: minmax(280px, 1fr) minmax(320px, 1fr);
     align-items: center;
     gap: 2.5rem;
-    padding: 4.5rem 10rem;
+    padding: 4.5rem var(--page-gutter);
     background:
         radial-gradient(circle at 20% 40%, rgba(107, 33, 168, 0.22), transparent 48%),
         linear-gradient(180deg, rgba(18, 15, 26, 0.9), rgba(8, 10, 15, 0.95));
@@ -57,7 +57,7 @@
 @media (max-width: 768px) {
     .final-cta {
         grid-template-columns: 1fr;
-        padding: 3.25rem 5%;
+        padding: 3.25rem var(--page-gutter);
         text-align: center;
     }
 }

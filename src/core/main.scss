@@ -11,6 +11,7 @@
 
 
 body {
+    --page-gutter: clamp(1.5rem, 6vw, 10rem);
     background-color: var(--background-color);
     background-image:
         radial-gradient(circle at 20% 0%, rgba(245, 158, 11, 0.08), transparent 35%),
@@ -25,4 +26,10 @@ h1,
 h2,
 h3 {
     font-family: var(--font-headings);
+}
+
+@media (max-width: 768px) {
+    body {
+        --page-gutter: 5%;
+    }
 }

@@ -4,7 +4,7 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 3rem;
-    padding: 5rem 10rem;
+    padding: 5rem var(--page-gutter);
     min-height: calc(80vh - 100px);
     background:
         radial-gradient(circle at 84% 36%, rgba(107, 33, 168, 0.24) 0%, transparent 48%),
@@ -16,7 +16,7 @@
     &::after {
         content: '';
         position: absolute;
-        inset: 1.2rem 10rem 1.2rem 10rem;
+        inset: 1.2rem var(--page-gutter) 1.2rem var(--page-gutter);
         border: 1px solid rgba(245, 158, 11, 0.18);
         border-radius: 18px;
         pointer-events: none;
@@ -107,14 +107,14 @@
         flex-direction: column;
         text-align: center;
         gap: 2.5rem;
-        padding: 3.75rem 5%;
+        padding: 3.75rem var(--page-gutter);
         min-height: auto;
         background:
             radial-gradient(circle at 50% 10%, rgba(107, 33, 168, 0.22) 0%, transparent 60%),
             linear-gradient(180deg, rgba(16, 18, 25, 0.82), rgba(10, 12, 18, 0.92));
 
         &::after {
-            inset: 0.8rem 5% 0.8rem 5%;
+            inset: 0.8rem var(--page-gutter) 0.8rem var(--page-gutter);
         }
 
         &__content {
