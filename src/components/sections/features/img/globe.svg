@@ -1,0 +1,7 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Globe icon">
+  <circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width="4"/>
+  <path fill="none" stroke="currentColor" stroke-width="4" d="M32 12v40"/>
+  <path fill="none" stroke="currentColor" stroke-width="4" d="M12 32h40"/>
+  <path fill="none" stroke="currentColor" stroke-width="4" d="M20 18c5 4 8 10 8 14s-3 10-8 14"/>
+  <path fill="none" stroke="currentColor" stroke-width="4" d="M44 18c-5 4-8 10-8 14s3 10 8 14"/>
+</svg>
