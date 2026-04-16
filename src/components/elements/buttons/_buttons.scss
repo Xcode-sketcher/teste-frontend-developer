@@ -1,18 +1,17 @@
-@use '../../../core/colors';
-@use '../../../core/typography';
-
 .btn {
     border-radius: 8px;
     padding: 16px;
     border: none;
-    color: colors.$white;
+    color: var(--white);
     font-size: 1.25rem;
 
     &--primary {
-        background-color: colors.$accent-color;
+        background-color: var(--accent-color);
+        
     }
     &--secondary {
-        background: none;
-        border: 1px solid colors.$primary-color;
+        background: transparent;
+        border: 1px solid var(--primary-color);
+        
     }
 }

@@ -1,5 +1,3 @@
-@use '../../../core/typography';
-@use '../../../core/colors';
 @use '../../elements/buttons/buttons';
 
 header {
@@ -7,8 +5,8 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 2rem 10rem;
-    border-top: 1px solid rgba(colors.$white, 0.12);
-    border-bottom: 1px solid rgba(colors.$white, 0.12);
+    border-top: 1px solid rgba(var(--white-rgb), 0.12);
+    border-bottom: 1px solid rgba(var(--white-rgb), 0.12);
     max-height: 100px;
 
     .logo{
@@ -24,11 +22,11 @@ header {
         &__text {
             font-size: 1.5rem;
             font-weight: bold;
-            font-family: typography.$font-headings;
-            color: colors.$secondary-color;
+            font-family: var(--font-headings);
+            color: var(--secondary-color);
 
             span {
-                color: colors.$primary-color; 
+                color: var(--primary-color); 
             }
         }
     }

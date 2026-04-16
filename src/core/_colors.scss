@@ -1,7 +1,11 @@
-$primary-color: #6B21A8; // Púrpura Arcana
-$secondary-color: #9CA3AF; // Papiro Banhado à Lua
-$accent-color: #F59E0B; // Fogo de Dragão
-$success-color: #10B981; // Verde Feérico
-$background-color: #121418; // Vazio Astral
 
-$white: #FFFFFF; // Branco Puro
+:root {
+    --primary-color: #6B21A8; // Púrpura Arcana
+    --secondary-color: #9CA3AF; // Papiro Banhado à Lua
+    --accent-color: #F59E0B; // Fogo de Dragão
+    --success-color: #10B981; // Verde Feérico
+    --background-color: #121418; // Vazio Astral
+
+    --white: #FFFFFF; // Branco Puro
+    --white-rgb: 255, 255, 255;
+}

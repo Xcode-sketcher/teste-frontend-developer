@@ -1,0 +1,53 @@
+.about {
+    padding: 5rem 10%;
+    background-color: rgba(var(--white-rgb), 0.04);
+    text-align: center;
+
+    &__title {
+        margin-bottom: 0.625rem;
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        color: var(--primary-color);
+    }
+
+    &__subtitle {
+        margin-bottom: 1.875rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: var(--secondary-color);
+    }
+
+    &__box {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2.5rem;
+        border: 1px solid rgba(107, 33, 168, 0.2);
+        border-radius: 16px;
+        background-color: var(--background-color);
+    }
+
+    &__text {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        font-style: italic;
+        color: var(--secondary-color);
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 3.75rem 5%;
+
+        &__subtitle {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        &__box {
+            padding: 1.5rem;
+        }
+
+        &__text {
+            font-size: 1rem;
+        }
+    }
+}

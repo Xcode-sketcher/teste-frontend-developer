@@ -2,7 +2,10 @@
 @use 'typography';
 @use 'colors';
 @use '../components/sections/header/header.scss';
+@use '../components/sections/hero/hero.scss';
+@use '../components/sections/about/about.scss';
+
 
 body {
-    background-color: colors.$background-color;
+    background-color: var(--background-color);
 }

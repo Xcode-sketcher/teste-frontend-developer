@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400..900&display=swap');
 
-$font-headings: 'Cinzel', serif;
-$font-secondary: 'Nunito Sans', sans-serif;
-$font-tertiary: 'Inter', sans-serif;
+:root {
+    $font-headings: 'Cinzel', serif;
+    $font-secondary: 'Nunito Sans', sans-serif;
+    $font-tertiary: 'Inter', sans-serif;
+}
+
 
