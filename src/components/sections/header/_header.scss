@@ -1,19 +1,24 @@
 @use '../../../core/typography';
 @use '../../../core/colors';
+@use '../../elements/buttons/buttons';
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 0;
+    padding: 2rem 10rem;
+    border-top: 1px solid rgba(colors.$white, 0.12);
+    border-bottom: 1px solid rgba(colors.$white, 0.12);
+    max-height: 100px;
 
     .logo{
+        margin: 0;
         display: flex;
         align-items: center;
         gap: 1rem;
 
         &__image {
-            max-height: 100px;
+            max-height: 64px;
         }
 
         &__text {
@@ -27,4 +32,6 @@ header {
             }
         }
     }
+
+
 }
