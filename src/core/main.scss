@@ -1,0 +1,9 @@
+@use 'reset';
+@use 'typography';
+@use 'colors';
+@use '../components/sections/header/header.scss';
+
+body {
+    padding: 0 10rem;
+    background-color: colors.$background-color;
+}

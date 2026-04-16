@@ -1,0 +1,30 @@
+@use '../../../core/typography';
+@use '../../../core/colors';
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &__image {
+            max-height: 100px;
+        }
+
+        &__text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: typography.$font-headings;
+            color: colors.$secondary-color;
+
+            span {
+                color: colors.$primary-color; 
+            }
+        }
+    }
+}
