@@ -1,13 +1,30 @@
 .hero {
+    position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 3rem;
     padding: 5rem 10rem;
     min-height: calc(80vh - 100px);
-    background: radial-gradient(circle at 80% 45%, rgba(107, 33, 168, 0.15) 0%, transparent 55%);
+    background:
+        radial-gradient(circle at 84% 36%, rgba(107, 33, 168, 0.24) 0%, transparent 48%),
+        radial-gradient(circle at 18% 78%, rgba(245, 158, 11, 0.15) 0%, transparent 42%),
+        linear-gradient(180deg, rgba(16, 18, 25, 0.82), rgba(10, 12, 18, 0.92)),
+        url('../assets/img/runes-pattern.svg');
+    background-size: auto, auto, auto, 200px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 1.2rem 10rem 1.2rem 10rem;
+        border: 1px solid rgba(245, 158, 11, 0.18);
+        border-radius: 18px;
+        pointer-events: none;
+    }
 
     &__content {
+        position: relative;
+        z-index: 1;
         max-width: 50%;
     }
 
@@ -16,6 +33,7 @@
         font-size: clamp(2.25rem, 5vw, 3.5rem);
         line-height: 1.1;
         color: var(--white);
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
     }
 
     &__title-highlight {
@@ -28,21 +46,59 @@
         font-size: 1.2rem;
         line-height: 1.6;
         color: var(--secondary-color);
+        max-width: 38ch;
     }
 
-    &__media {
-        width: min(45%, 720px);
+    &__panel {
+        position: relative;
+        z-index: 1;
+        width: min(38%, 420px);
+        padding: 1.5rem;
         border-radius: 16px;
-        background: linear-gradient(135deg, rgba(30, 33, 40, 0.95), rgba(107, 33, 168, 0.65));
-        box-shadow: 0 0 40px rgba(107, 33, 168, 0.3);
-        overflow: hidden;
+        background: linear-gradient(180deg, rgba(28, 21, 40, 0.94), rgba(13, 15, 22, 0.95));
+        border: 1px solid rgba(245, 158, 11, 0.28);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(var(--white-rgb), 0.08);
     }
 
-    &__image {
-        display: block;
+    &__panel-title {
+        margin-bottom: 1rem;
+        font-size: 1.35rem;
+        color: #ffd28d;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    &__form {
+        display: grid;
+        gap: 0.65rem;
+    }
+
+    &__input,
+    &__textarea {
         width: 100%;
-        height: auto;
-        object-fit: cover;
+        border: 1px solid rgba(245, 158, 11, 0.28);
+        border-radius: 8px;
+        background-color: rgba(12, 13, 18, 0.84);
+        color: #f6e8cb;
+        font-family: var(--font-secondary);
+        font-size: 0.95rem;
+        padding: 0.8rem 0.9rem;
+    }
+
+    &__input::placeholder,
+    &__textarea::placeholder {
+        color: rgba(246, 232, 203, 0.55);
+    }
+
+    &__textarea {
+        resize: vertical;
+        min-height: 98px;
+    }
+
+    &__submit {
+        margin-top: 0.35rem;
+        width: 100%;
+        font-size: 1rem;
     }
 }
 
@@ -53,7 +109,13 @@
         gap: 2.5rem;
         padding: 3.75rem 5%;
         min-height: auto;
-        background: radial-gradient(circle at 50% 10%, rgba(107, 33, 168, 0.15) 0%, transparent 60%);
+        background:
+            radial-gradient(circle at 50% 10%, rgba(107, 33, 168, 0.22) 0%, transparent 60%),
+            linear-gradient(180deg, rgba(16, 18, 25, 0.82), rgba(10, 12, 18, 0.92));
+
+        &::after {
+            inset: 0.8rem 5% 0.8rem 5%;
+        }
 
         &__content {
             max-width: 100%;
@@ -64,7 +126,7 @@
             font-size: 1rem;
         }
 
-        &__media {
+        &__panel {
             width: 100%;
             max-width: 460px;
         }

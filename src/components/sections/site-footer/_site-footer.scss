@@ -1,0 +1,15 @@
+.site-footer {
+    padding: 2rem 5%;
+    background:
+        linear-gradient(180deg, rgba(15, 18, 26, 0.95), rgba(7, 8, 12, 0.98));
+    border-top: 1px solid rgba(245, 158, 11, 0.2);
+
+    &__line {
+        margin: 0;
+        text-align: center;
+        font-family: var(--font-secondary);
+        color: rgba(255, 227, 176, 0.7);
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+}

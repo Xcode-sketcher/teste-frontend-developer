@@ -1,53 +1,87 @@
 .about {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(320px, 1fr);
+    align-items: center;
+    gap: 2.5rem;
     padding: 5rem 10%;
-    background-color: rgba(var(--white-rgb), 0.04);
-    text-align: center;
+    background:
+        radial-gradient(circle at 16% 22%, rgba(245, 158, 11, 0.14), transparent 34%),
+        linear-gradient(180deg, rgba(20, 22, 30, 0.7), rgba(16, 18, 26, 0.82));
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        top: 1.2rem;
+        bottom: 1.2rem;
+        border: 1px solid rgba(245, 158, 11, 0.13);
+        border-radius: 18px;
+        pointer-events: none;
+    }
+
+    &__media {
+        min-height: 260px;
+        border-radius: 16px;
+        border: 1px solid rgba(245, 158, 11, 0.28);
+        background: linear-gradient(145deg, rgba(18, 20, 24, 0.72), rgba(107, 33, 168, 0.35));
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(var(--white-rgb), 0.08) inset;
+        overflow: hidden;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 260px;
+        object-fit: cover;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        max-width: 560px;
+    }
 
     &__title {
-        margin-bottom: 0.625rem;
+        margin-bottom: 0.85rem;
         font-size: clamp(2rem, 4vw, 2.5rem);
-        color: var(--primary-color);
-    }
-
-    &__subtitle {
-        margin-bottom: 1.875rem;
-        font-size: 1.2rem;
-        font-weight: 300;
-        color: var(--secondary-color);
-    }
-
-    &__box {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2.5rem;
-        border: 1px solid rgba(107, 33, 168, 0.2);
-        border-radius: 16px;
-        background-color: var(--background-color);
+        color: #ffd28d;
     }
 
     &__text {
         font-size: 1.1rem;
         line-height: 1.7;
-        font-style: italic;
         color: var(--secondary-color);
     }
 }
 
 @media (max-width: 768px) {
     .about {
+        grid-template-columns: 1fr;
         padding: 3.75rem 5%;
+        text-align: center;
 
-        &__subtitle {
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-        }
-
-        &__box {
-            padding: 1.5rem;
+        &::after {
+            left: 5%;
+            right: 5%;
         }
 
         &__text {
             font-size: 1rem;
+        }
+
+        &__media {
+            min-height: 220px;
+        }
+
+        &__image {
+            min-height: 220px;
+        }
+
+        &__content {
+            max-width: 100%;
         }
     }
 }

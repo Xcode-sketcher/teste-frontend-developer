@@ -26,25 +26,34 @@
                 <p class="hero__description">Deixe a papelada para os goblins. O <strong>Nexus</strong> é o software definitivo que transforma as anotações caóticas do Mestre em um universo vivo e inesquecível em minutos.</p>
                 <a href="#" class="btn btn--primary">Comece sua Campanha Grátis</a>
             </div>
-            <div class="hero__media">
-                <img src="" class="hero__image js-hero-image" alt="Interface do Nexus em ação" loading="lazy">
+            <div class="hero__panel">
+                <h2 class="hero__panel-title">Chamada para acao</h2>
+                <form class="hero__form" action="#" method="post">
+                    <input class="hero__input" type="text" name="nome" placeholder="Nome" aria-label="Nome">
+                    <input class="hero__input" type="email" name="email" placeholder="E-mail" aria-label="E-mail">
+                    <input class="hero__input" type="tel" name="telefone" placeholder="DDD + Telefone" aria-label="Telefone">
+                    <textarea class="hero__textarea" name="mensagem" rows="4" placeholder="Como podemos te ajudar?" aria-label="Mensagem"></textarea>
+                    <button class="btn btn--primary hero__submit" type="submit">Quero jogar com vantagem</button>
+                </form>
             </div>
         </section>
 
         <!-- seção do sobre a plataforma -->
 
         <section class="about">
-            <h2 class="about__title">De Mestres para Mestres</h2>
-            <h3 class="about__subtitle">Conhecemos o peso da coroa do Mestre.</h3>
-            <div class="about__box">
-                <p class="about__text">A TramaMestra nao nasceu em um escritorio corporativo. Ela nasceu as 3 da manha, depois que nosso Mestre perdeu 15 minutos procurando o nome de um estalajadeiro num caderno. Criamos o Nexus porque precisavamos dele. Queriamos focar em reviravoltas epicas, nao em burocracia. Agora, abrimos os portoes dessa fortaleza para voce.</p>
+            <div class="about__media">
+                <img src="" class="about__image js-about-image" alt="Cena de campanha no Nexus" loading="lazy">
+            </div>
+            <div class="about__content">
+                <h2 class="about__title">Quem Somos</h2>
+                <p class="about__text">A TramaMestra nao nasceu em um escritorio corporativo. Ela nasceu as 3 da manha, depois que nosso Mestre perdeu 15 minutos procurando o nome de um estalajadeiro num caderno. Criamos o Nexus porque precisavamos dele. Queriamos focar em reviravoltas epicas, nao em burocracia.</p>
             </div>
         </section>
 
         <!-- seção de recursos/benefícios -->
 
         <section class="features">
-            <h2 class="features__tittle">Domine sua Narrativa, Liberte sua Mente</h2>
+            <h2 class="features__title">Com este servico voce:</h2>
             <div class="features__list">
                 <div class="features__item">
                     <div class="features__item-icon" aria-hidden="true">
@@ -97,9 +106,55 @@
                     <p class="features__item-description">De uma pequena vila a um multiverso. Mapas interativos com pinos garantem controle total, <span>não importa o tamanho da sua história.</span></p>
                 </div>
             </div>
+            <a href="#" class="btn btn--primary features__cta">Comece sua Campanha</a>
+        </section>
+
+        <!-- seção de perguntas frequentes -->
+
+        <section class="faq">
+            <h2 class="faq__title">Perguntas Frequentes</h2>
+            <div class="faq__list">
+                <details class="faq__item">
+                    <summary class="faq__question">Quando vou comecar a ver resultado nas minhas campanhas?</summary>
+                    <p class="faq__answer">A maioria dos mestres percebe ganho de organizacao ja na primeira sessao com o Nexus. Em poucas campanhas, o tempo de preparo tende a cair bastante.</p>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">Preciso saber tecnologia para usar a plataforma?</summary>
+                    <p class="faq__answer">Nao. A estrutura e guiada para mestres de todos os niveis, com fluxos simples para criar NPCs, locais, eventos e ganchos.</p>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">Consigo usar em campanhas longas e mundos grandes?</summary>
+                    <p class="faq__answer">Sim. O Nexus foi pensado para escalar junto da narrativa, com conexoes entre elementos para manter o controle da lore.</p>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">O sistema ajuda durante a sessao ao vivo?</summary>
+                    <p class="faq__answer">Sim. A busca rapida e os vinculos entre personagens, itens e regioes ajudam a recuperar informacao em segundos.</p>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">Posso testar antes de decidir?</summary>
+                    <p class="faq__answer">Pode. Voce pode iniciar com um fluxo de entrada leve para validar se o Nexus encaixa no seu estilo de mestrar.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div class="final-cta__content">
+                <h2 class="final-cta__title">Faca sua chamada final</h2>
+                <p class="final-cta__text">Se voce chegou ate aqui, sua mesa merece um sistema a altura da sua historia. Traga ordem ao caos e ganhe tempo para narrar melhor.</p>
+            </div>
+            <div class="final-cta__panel">
+                <p class="final-cta__panel-text">Converse com nosso time e descubra como montar seu grimorio vivo de campanha sem burocracia.</p>
+                <a href="#" class="btn btn--primary final-cta__button">Quero comecar agora</a>
+                <p class="final-cta__panel-note">Resposta rapida para mestres que querem acelerar a proxima sessao.</p>
+            </div>
         </section>
 
     </main>
+
+    <footer class="site-footer">
+        <p class="site-footer__line">Trama Mestra | Todos os direitos reservados - 2026</p>
+        <p class="site-footer__line">CNPJ 99.999.999/0001-99 | Termos de uso</p>
+    </footer>
 
     <script src="js/script.[contenthash].js"></script>
 </body>

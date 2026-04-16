@@ -5,31 +5,59 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 2rem 10rem;
-    border-top: 1px solid rgba(var(--white-rgb), 0.12);
-    border-bottom: 1px solid rgba(var(--white-rgb), 0.12);
+    border-top: 1px solid rgba(245, 158, 11, 0.22);
+    border-bottom: 1px solid rgba(245, 158, 11, 0.22);
+    background:
+        linear-gradient(180deg, rgba(10, 11, 16, 0.9), rgba(10, 11, 16, 0.7)),
+        url('../assets/img/runes-pattern.svg');
+    background-size: auto, 180px;
     max-height: 100px;
 
-    .logo{
+    .logo {
         margin: 0;
         display: flex;
         align-items: center;
         gap: 1rem;
 
         &__image {
-            max-height: 64px;
+            max-height: 62px;
+            filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.35));
         }
 
         &__text {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.65rem;
+            font-weight: 700;
             font-family: var(--font-headings);
-            color: var(--secondary-color);
+            letter-spacing: 0.03em;
+            color: var(--white);
 
             span {
-                color: var(--primary-color); 
+                color: var(--accent-color);
             }
         }
     }
 
+    .btn--secondary {
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 5%;
+        gap: 0.9rem;
+        flex-direction: column;
+        max-height: none;
+
+        .logo {
+            &__image {
+                max-height: 50px;
+            }
+
+            &__text {
+                font-size: 1.35rem;
+            }
+        }
+    }
 
 }

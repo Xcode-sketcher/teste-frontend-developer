@@ -5,8 +5,24 @@
 @use '../components/sections/hero/hero.scss';
 @use '../components/sections/about/about.scss';
 @use '../components/sections/features/features.scss';
+@use '../components/sections/faq/faq.scss';
+@use '../components/sections/final-cta/final-cta.scss';
+@use '../components/sections/site-footer/site-footer.scss';
 
 
 body {
     background-color: var(--background-color);
+    background-image:
+        radial-gradient(circle at 20% 0%, rgba(245, 158, 11, 0.08), transparent 35%),
+        radial-gradient(circle at 90% 10%, rgba(107, 33, 168, 0.12), transparent 32%),
+        linear-gradient(180deg, #10131a, #0a0c12 72%);
+    color: var(--secondary-color);
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-headings);
 }
