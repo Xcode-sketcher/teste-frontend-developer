@@ -9,10 +9,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "build:watch": "webpack --config webpack.config.js --watch"
+    "build:watch": "webpack --config webpack.config.js --watch",
+    "preview": "npm run build && (npx http-server dist -p 4173 --open || npx http-server dist -p 4174 --open || npx http-server dist -p 4175 --open)"
   },
   "devDependencies": {
     "css-loader": "^7.1.4",
+    "http-server": "^14.1.1",
     "css-minimizer-webpack-plugin": "^7.0.2",
     "html-webpack-plugin": "^5.6.6",
     "mini-css-extract-plugin": "^2.9.4",
