@@ -1,13 +1,17 @@
+@use '../../elements/section-intro/section-intro' as section-intro;
+@use '../../elements/surface-card/surface-card' as surface-card;
+
 .faq {
     padding: 4.5rem var(--page-gutter);
     background:
         linear-gradient(180deg, rgba(14, 16, 23, 0.96), rgba(10, 12, 18, 0.98));
 
     &__title {
-        margin: 0 0 2rem;
-        text-align: center;
-        color: #f0d39b;
-        font-size: clamp(2rem, 3.6vw, 2.8rem);
+        @include section-intro.title(
+            $margin: 0 0 2rem,
+            $size: clamp(2rem, 3.6vw, 2.8rem),
+            $align: center
+        );
     }
 
     &__list {
@@ -18,11 +22,15 @@
     }
 
     &__item {
-        border: 1px solid rgba(245, 158, 11, 0.22);
-        border-radius: 10px;
-        background:
-            linear-gradient(180deg, rgba(107, 33, 168, 0.12), transparent 42%),
-            rgba(15, 17, 24, 0.9);
+        @include surface-card.surface(
+            $border: 1px solid rgba(245, 158, 11, 0.22),
+            $radius: 10px,
+            $background: (
+                linear-gradient(180deg, rgba(107, 33, 168, 0.12), transparent 42%),
+                rgba(15, 17, 24, 0.9)
+            ),
+            $shadow: none
+        );
         overflow: hidden;
     }
 

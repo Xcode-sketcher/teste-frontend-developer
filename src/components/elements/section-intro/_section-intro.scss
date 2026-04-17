@@ -1,0 +1,57 @@
+@mixin eyebrow(
+    $margin: 0 0 0.7rem,
+    $size: 0.76rem,
+    $spacing: 0.24em,
+    $color: #ffd28d,
+    $align: null
+) {
+    margin: $margin;
+    font-size: $size;
+    text-transform: uppercase;
+    letter-spacing: $spacing;
+    color: $color;
+
+    @if $align != null {
+        text-align: $align;
+    }
+}
+
+@mixin title(
+    $margin: 0 0 0.85rem,
+    $size: clamp(2rem, 4vw, 2.8rem),
+    $color: #f0d39b,
+    $line-height: null,
+    $align: null
+) {
+    margin: $margin;
+    font-size: $size;
+    color: $color;
+
+    @if $line-height != null {
+        line-height: $line-height;
+    }
+
+    @if $align != null {
+        text-align: $align;
+    }
+}
+
+@mixin description(
+    $margin: 0 0 1.2rem,
+    $color: rgba(var(--white-rgb), 0.72),
+    $line-height: 1.7,
+    $max-width: null,
+    $align: null
+) {
+    margin: $margin;
+    color: $color;
+    line-height: $line-height;
+
+    @if $max-width != null {
+        max-width: $max-width;
+    }
+
+    @if $align != null {
+        text-align: $align;
+    }
+}

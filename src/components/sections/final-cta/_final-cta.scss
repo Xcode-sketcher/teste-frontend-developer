@@ -1,3 +1,6 @@
+@use '../../elements/section-intro/section-intro' as section-intro;
+@use '../../elements/surface-card/surface-card' as surface-card;
+
 .final-cta {
     display: grid;
     grid-template-columns: minmax(280px, 1fr) minmax(320px, 1fr);
@@ -9,10 +12,11 @@
         linear-gradient(180deg, rgba(18, 15, 26, 0.9), rgba(8, 10, 15, 0.95));
 
     &__title {
-        margin: 0 0 0.9rem;
-        color: #f0d39b;
-        font-size: clamp(2rem, 4vw, 3rem);
-        line-height: 1.08;
+        @include section-intro.title(
+            $margin: 0 0 0.9rem,
+            $size: clamp(2rem, 4vw, 3rem),
+            $line-height: 1.08
+        );
     }
 
     &__text {
@@ -24,13 +28,19 @@
     }
 
     &__panel {
-        border: 1px solid rgba(245, 158, 11, 0.28);
-        border-radius: 14px;
+        @include surface-card.surface(
+            $border: 1px solid rgba(245, 158, 11, 0.28),
+            $radius: 14px,
+            $background: (
+                linear-gradient(180deg, rgba(107, 33, 168, 0.13), transparent 45%),
+                rgba(18, 20, 24, 0.82)
+            ),
+            $shadow: (
+                0 18px 38px rgba(0, 0, 0, 0.32),
+                inset 0 0 0 1px rgba(var(--white-rgb), 0.08)
+            )
+        );
         padding: 1.8rem;
-        background:
-            linear-gradient(180deg, rgba(107, 33, 168, 0.13), transparent 45%),
-            rgba(18, 20, 24, 0.82);
-        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.32), inset 0 0 0 1px rgba(var(--white-rgb), 0.08);
     }
 
     &__panel-text {

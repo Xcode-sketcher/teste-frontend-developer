@@ -1,3 +1,6 @@
+@use '../../elements/section-intro/section-intro' as section-intro;
+@use '../../elements/surface-card/surface-card' as surface-card;
+
 .features {
     display: flex;
     flex-direction: column;
@@ -10,17 +13,31 @@
     color: var(--secondary-color);
 
     &__title {
-        margin: 0;
+        @include section-intro.title(
+            $margin: 0,
+            $size: clamp(2rem, 3.5vw, 2.7rem),
+            $align: center
+        );
         font-family: var(--font-headings);
-        font-size: clamp(2rem, 3.5vw, 2.7rem);
-        color: #f0d39b;
-        text-align: center;
+    }
+
+    &__eyebrow {
+        @include section-intro.eyebrow($margin: 0);
+    }
+
+    &__desc {
+        @include section-intro.description(
+            $margin: -1rem 0 0,
+            $line-height: 1.65,
+            $max-width: 640px,
+            $align: center
+        );
     }
 
     &__list {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, minmax(260px, 1fr));
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
         gap: 1.5rem 2rem;
     }
 
@@ -30,12 +47,18 @@
         gap: 0.45rem 0.85rem;
         align-items: start;
         padding: 1.2rem 1.25rem;
-        border: 1px solid rgba(245, 158, 11, 0.24);
-        border-radius: 14px;
-        background:
-            linear-gradient(160deg, rgba(107, 33, 168, 0.16), transparent 40%),
-            rgba(12, 14, 20, 0.88);
-        box-shadow: inset 0 0 0 1px rgba(var(--white-rgb), 0.05), 0 8px 24px rgba(0, 0, 0, 0.3);
+        @include surface-card.surface(
+            $border: 1px solid rgba(245, 158, 11, 0.24),
+            $radius: 14px,
+            $background: (
+                linear-gradient(160deg, rgba(107, 33, 168, 0.16), transparent 40%),
+                rgba(12, 14, 20, 0.88)
+            ),
+            $shadow: (
+                inset 0 0 0 1px rgba(var(--white-rgb), 0.05),
+                0 8px 24px rgba(0, 0, 0, 0.3)
+            )
+        );
     }
 
     &__item-icon {
@@ -78,6 +101,22 @@
     &__cta {
         min-width: 270px;
         text-align: center;
+    }
+}
+
+@media (max-width: 1280px) {
+    .features {
+        &__list {
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .features {
+        &__list {
+            grid-template-columns: repeat(2, minmax(240px, 1fr));
+        }
     }
 }
 

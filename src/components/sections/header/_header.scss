@@ -11,7 +11,7 @@ header {
         linear-gradient(180deg, rgba(10, 11, 16, 0.9), rgba(10, 11, 16, 0.7)),
         url('../assets/img/runes-pattern.svg');
     background-size: auto, 180px;
-    max-height: 100px;
+    min-height: 96px;
 
     .logo {
         margin: 0;
@@ -20,7 +20,9 @@ header {
         gap: 1rem;
 
         &__image {
-            max-height: 62px;
+            width: 62px;
+            height: 62px;
+            object-fit: contain;
             filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.35));
         }
 
@@ -40,6 +42,31 @@ header {
     .btn--secondary {
         min-width: 180px;
     }
+
+    .header__actions {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .top-nav {
+        display: flex;
+        align-items: center;
+        gap: 1.1rem;
+
+        a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-family: var(--font-secondary);
+            font-size: 0.86rem;
+            letter-spacing: 0.04em;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: #ffd28d;
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -47,16 +74,26 @@ header {
         padding: 1rem var(--page-gutter);
         gap: 0.9rem;
         flex-direction: column;
-        max-height: none;
+        min-height: 0;
 
         .logo {
             &__image {
-                max-height: 50px;
+                width: 50px;
+                height: 50px;
             }
 
             &__text {
                 font-size: 1.35rem;
             }
+        }
+
+        .header__actions {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .top-nav {
+            display: none;
         }
     }
 

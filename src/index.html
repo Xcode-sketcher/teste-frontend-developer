@@ -9,12 +9,21 @@
     <title>Trama Mestra</title>
 </head>
 <body>
+    <div class="bg-stars" aria-hidden="true"></div>
+
     <header>
         <div class="logo">
-            <img src="" class="logo__image js-logo" alt="Trama Mestra Logo" loading="lazy">
+            <img src="<%= require('./assets/img/logo.webp') %>" class="logo__image" alt="Trama Mestra Logo" loading="eager" decoding="async" fetchpriority="high" width="219" height="219">
             <span class="logo__text">Trama <span>Mestra</span></span>
         </div>
-        <button class="btn btn--secondary">(11)9 9999-9999</button>
+        <div class="header__actions">
+            <nav class="top-nav" aria-label="Navegação principal">
+                <a href="#features">Recursos</a>
+                <a href="#campaign-feed">Campanha</a>
+                <a href="#plans">Planos</a>
+            </nav>
+            <button class="btn btn--secondary">(11)9 9999-9999</button>
+        </div>
     </header>
     <main>
 
@@ -22,9 +31,13 @@
 
         <section class="hero">
             <div class="hero__content">
+                <p class="hero__eyebrow">O Nexo da Sua Campanha RPG</p>
                 <h1 class="hero__title">Domine o Caos, <br><span class="hero__title-highlight">Crie Lendas.</span></h1>
                 <p class="hero__description">Deixe a papelada para os goblins. O <strong>Nexus</strong> é o software definitivo que transforma as anotações caóticas do Mestre em um universo vivo e inesquecível em minutos.</p>
-                <a href="#" class="btn btn--primary">Comece sua Campanha Grátis</a>
+                <div class="hero__actions">
+                    <a href="#plans" class="btn btn--primary">Rolar Iniciativa</a>
+                    <a href="#features" class="btn btn--secondary">Ver Recursos</a>
+                </div>
             </div>
             <div class="hero__panel">
                 <h2 class="hero__panel-title">Chamada para acao</h2>
@@ -36,13 +49,33 @@
                     <button class="btn btn--primary hero__submit" type="submit">Quero jogar com vantagem</button>
                 </form>
             </div>
+
+            <div class="hero__dice-row" aria-label="Dados de RPG">
+                <button class="hero__dice-item js-dice" type="button" data-sides="20" aria-label="Rolar D20">
+                    <span class="hero__dice-shape">20</span>
+                    <span class="hero__dice-label">D20</span>
+                </button>
+                <button class="hero__dice-item js-dice" type="button" data-sides="12" aria-label="Rolar D12">
+                    <span class="hero__dice-shape">12</span>
+                    <span class="hero__dice-label">D12</span>
+                </button>
+                <button class="hero__dice-item js-dice" type="button" data-sides="8" aria-label="Rolar D8">
+                    <span class="hero__dice-shape">8</span>
+                    <span class="hero__dice-label">D8</span>
+                </button>
+                <button class="hero__dice-item js-dice" type="button" data-sides="4" aria-label="Rolar D4">
+                    <span class="hero__dice-shape">4</span>
+                    <span class="hero__dice-label">D4</span>
+                </button>
+            </div>
+            <p class="hero__dice-result js-dice-result" aria-live="polite">Clique em um dado para testar sua sorte.</p>
         </section>
 
         <!-- seção do sobre a plataforma -->
 
         <section class="about">
             <div class="about__media">
-                <img src="" class="about__image js-about-image" alt="Cena de campanha no Nexus" loading="lazy">
+                <img src="<%= require('./components/sections/about/img/about-scene.svg') %>" class="about__image" alt="Mapa tatico de campanha em estilo fantasia medieval" loading="lazy" decoding="async" width="1200" height="700">
             </div>
             <div class="about__content">
                 <h2 class="about__title">Quem Somos</h2>
@@ -52,8 +85,10 @@
 
         <!-- seção de recursos/benefícios -->
 
-        <section class="features">
-            <h2 class="features__title">Com este servico voce:</h2>
+        <section class="features" id="features">
+            <p class="features__eyebrow">Arsenal do Mestre</p>
+            <h2 class="features__title">Aprofunde sua Trama</h2>
+            <p class="features__desc">Recursos detalhados para cada momento da mesa, da prep épica ao combate frenético.</p>
             <div class="features__list">
                 <div class="features__item">
                     <div class="features__item-icon" aria-hidden="true">
@@ -105,8 +140,131 @@
                     <h3 class="features__item-title">Um Universo Escalável</h3>
                     <p class="features__item-description">De uma pequena vila a um multiverso. Mapas interativos com pinos garantem controle total, <span>não importa o tamanho da sua história.</span></p>
                 </div>
+                <div class="features__item">
+                    <div class="features__item-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scroll icon">
+                            <rect x="14" y="12" width="36" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="4"/>
+                            <path d="M22 24h20M22 32h16M22 40h12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                            <circle cx="18" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="4"/>
+                            <circle cx="46" cy="52" r="4" fill="none" stroke="currentColor" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <h3 class="features__item-title">Cronicas Automaticas</h3>
+                    <p class="features__item-description">Cada decisao importante vira registro vivo. No fim da sessao, seu grupo recebe um <span class="features__item-highlight">resumo narrativo pronto</span> para continuar no proximo encontro.</p>
+                </div>
+                <div class="features__item">
+                    <div class="features__item-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sword and shield icon">
+                            <path d="M32 10l12 6v12c0 12-12 20-12 20S20 40 20 28V16l12-6z" fill="none" stroke="currentColor" stroke-width="4"/>
+                            <path d="M12 52l16-16M24 52l-12-12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                            <circle cx="32" cy="27" r="4" fill="none" stroke="currentColor" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <h3 class="features__item-title">Encontros Balanceados</h3>
+                    <p class="features__item-description">Gere combates com desafio certo para o nivel do grupo em segundos. O motor ajusta inimigos, objetivos e ritmo para manter a <span class="features__item-highlight">tensao ideal</span>.</p>
+                </div>
+                <div class="features__item">
+                    <div class="features__item-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dice icon">
+                            <rect x="14" y="14" width="36" height="36" rx="6" fill="none" stroke="currentColor" stroke-width="4"/>
+                            <circle cx="24" cy="24" r="2.6" fill="currentColor"/>
+                            <circle cx="40" cy="24" r="2.6" fill="currentColor"/>
+                            <circle cx="24" cy="40" r="2.6" fill="currentColor"/>
+                            <circle cx="40" cy="40" r="2.6" fill="currentColor"/>
+                            <circle cx="32" cy="32" r="2.6" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="features__item-title">Rolagem com Historico</h3>
+                    <p class="features__item-description">Dados com modificadores e registro por sessao. Revise cada jogada importante com <span class="features__item-highlight">transparencia total</span> para o grupo.</p>
+                </div>
+                <div class="features__item">
+                    <div class="features__item-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Linked nodes icon">
+                            <circle cx="18" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="4"/>
+                            <circle cx="46" cy="20" r="7" fill="none" stroke="currentColor" stroke-width="4"/>
+                            <circle cx="32" cy="46" r="7" fill="none" stroke="currentColor" stroke-width="4"/>
+                            <path d="M24 22l16-2M22 24l8 14M42 24l-8 14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="features__item-title">Nexo Compartilhado</h3>
+                    <p class="features__item-description">Mestre e jogadores acompanham elementos permitidos em tempo real. A mesa inteira joga com a mesma base de <span class="features__item-highlight">informacao viva</span>.</p>
+                </div>
             </div>
             <a href="#" class="btn btn--primary features__cta">Comece sua Campanha</a>
+        </section>
+
+        <section class="campaign-feed" id="campaign-feed">
+            <div class="campaign-feed__text reveal">
+                <p class="campaign-feed__eyebrow">Campanha Viva</p>
+                <h2 class="campaign-feed__title">Tudo Acontece em Tempo Real</h2>
+                <p class="campaign-feed__desc">O activity feed registra descobertas, batalhas e decisões para criar uma crônica automática da sua mesa.</p>
+                <ul class="campaign-feed__bullets">
+                    <li>Notificações para toda a mesa</li>
+                    <li>Log automático de sessões</li>
+                    <li>Linha do tempo interativa</li>
+                </ul>
+            </div>
+            <div class="campaign-feed__panel reveal">
+                <div class="campaign-feed__panel-header">
+                    <span class="campaign-feed__dot campaign-feed__dot--r"></span>
+                    <span class="campaign-feed__dot campaign-feed__dot--y"></span>
+                    <span class="campaign-feed__dot campaign-feed__dot--g"></span>
+                    <span class="campaign-feed__panel-title">campanha activity feed</span>
+                </div>
+                <form class="campaign-feed__composer js-feed-form" action="#" method="post">
+                    <input class="campaign-feed__input js-feed-input" type="text" name="feedEvent" maxlength="140" placeholder="Ex: Grupo derrotou o lich de obsidiana" aria-label="Novo evento da campanha">
+                    <button class="btn btn--secondary campaign-feed__send" type="submit">Adicionar</button>
+                </form>
+                <div class="campaign-feed__list js-feed-list" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="plans" id="plans">
+            <p class="plans__eyebrow">Arquiteto de Mundos</p>
+            <h2 class="plans__title">Planos de Arquiteto</h2>
+            <p class="plans__desc">Do aprendiz ao mestre lendário, escolha o plano que respeita a épica da sua campanha.</p>
+
+            <div class="plans__grid">
+                <article class="plans__card reveal">
+                    <p class="plans__tier">Aprendiz</p>
+                    <h3 class="plans__name">Grátis</h3>
+                    <p class="plans__price">R$ 0<span>/mês</span></p>
+                    <ul class="plans__features">
+                        <li>1 campanha ativa</li>
+                        <li>Gerador de mapas básico</li>
+                        <li>Até 20 PNJs</li>
+                        <li>Rolador de dados completo</li>
+                    </ul>
+                    <a href="#" class="btn btn--secondary plans__button">Começar Grátis</a>
+                </article>
+
+                <article class="plans__card plans__card--featured reveal">
+                    <p class="plans__badge">Mais Popular</p>
+                    <p class="plans__tier">Nexus</p>
+                    <h3 class="plans__name">Arquiteto</h3>
+                    <p class="plans__price">R$ 29<span>/mês</span></p>
+                    <ul class="plans__features">
+                        <li>Campanhas ilimitadas</li>
+                        <li>Mapas dinâmicos avançados</li>
+                        <li>PNJs ilimitados com IA</li>
+                        <li>Prep inteligente com IA</li>
+                    </ul>
+                    <a href="#" class="btn btn--primary plans__button">Assinar Agora</a>
+                </article>
+
+                <article class="plans__card reveal">
+                    <p class="plans__tier">Lendário</p>
+                    <h3 class="plans__name">Oráculo</h3>
+                    <p class="plans__price">R$ 69<span>/mês</span></p>
+                    <ul class="plans__features">
+                        <li>Tudo do Arquiteto</li>
+                        <li>Jogadores ilimitados</li>
+                        <li>Exportação para PDF/VTT</li>
+                        <li>Suporte prioritário</li>
+                    </ul>
+                    <a href="#" class="btn btn--secondary plans__button">Contato Comercial</a>
+                </article>
+            </div>
         </section>
 
         <!-- seção de perguntas frequentes -->
@@ -155,7 +313,5 @@
         <p class="site-footer__line">Trama Mestra | Todos os direitos reservados - 2026</p>
         <p class="site-footer__line">CNPJ 99.999.999/0001-99 | Termos de uso</p>
     </footer>
-
-    <script src="js/script.[contenthash].js"></script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+@mixin dot-item(
+    $padding-left: 1.35rem,
+    $top: 0.42rem,
+    $size: 8px,
+    $color: var(--accent-color),
+    $glow: 0 0 10px rgba(245, 158, 11, 0.45)
+) {
+    padding-left: $padding-left;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: $top;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        background: $color;
+        box-shadow: $glow;
+    }
+}
